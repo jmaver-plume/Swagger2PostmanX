@@ -1,0 +1,20 @@
+{
+  "name": "Swagger2PostmanX",
+  "version": "1.0.0",
+  "preferGlobal": true,
+  "type": "module",
+  "dependencies": {
+    "openapi-to-postmanv2": "^4.9.0",
+    "pino": "^8.10.0",
+    "pino-pretty": "^9.2.0"
+  },
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "description": "",
+  "devDependencies": {
+    "prettier": "^2.8.4"
+  }
+}
