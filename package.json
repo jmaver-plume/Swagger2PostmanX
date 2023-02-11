@@ -1,0 +1,21 @@
+{
+  "name": "swagger-postman-importer",
+  "version": "1.0.0",
+  "preferGlobal": true,
+  "type": "module",
+  "bin": {
+    "swagger-postman": "bin/index.js"
+  },
+  "dependencies": {
+    "commander": "^10.0.0",
+    "pino": "^8.10.0"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
