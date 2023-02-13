@@ -1,22 +1,21 @@
-import { program } from 'commander';
-import { SwaggerPostmanConverter } from '../src/swagger-postman-converter';
+#!/usr/bin/env node
 
-const program = new Command()
+import { Command } from "commander";
+const program = new Command();
+import { Swagger2PostmanX } from "../src/swagger-2-postman-x.js";
+
+program.name("Swagger2PostmanX").version("0.0.1");
 
 program
-    .name('swagger-postman')
-    .version('0.0.1')
+  .command("convert")
+  .description(
+    "convert a list of swagger specifications into a single postman collection with support for environment variables"
+  )
+  .option("-i, --input <files...>", "specify a list of input files")
+  .option("-o, --output <output>", "specify output file", "output.json")
+  .action(({ output, input }) => {
+    const swagger2PostmanX = new Swagger2PostmanX(input, output);
+    swagger2PostmanX.convert();
+  });
 
-program
-    .command('convert')
-    .description('convert a list of swagger specifications into a single postman collection with support for environment variables')
-    .option('-i, --input <files...>', 'specify a list of input files')
-    .option('-o, --output <output>', 'specify output file', 'output.json')
-    .action((prev, options) => {
-        console.log('prev: ', prev)
-        console.log('options: ', options)
-        const swaggerPostmanConverter = new SwaggerPostmanConverter(options.input, options.output);
-        swaggerPostmanConverter.convert()
-    })
-
-program.parse()
+program.parse();

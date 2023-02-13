@@ -1,21 +1,22 @@
 {
-  "name": "swagger-postman-importer",
+  "name": "Swagger2PostmanX",
   "version": "1.0.0",
   "preferGlobal": true,
   "type": "module",
   "bin": {
-    "swagger-postman": "bin/index.js"
+    "Swagger2PostmanX": "bin/index.js"
   },
   "dependencies": {
     "commander": "^10.0.0",
-    "pino": "^8.10.0"
+    "openapi-to-postmanv2": "^4.9.0",
+    "pino": "^8.10.0",
+    "pino-pretty": "^9.2.0"
   },
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "description": ""
 }
